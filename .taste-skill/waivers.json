@@ -1,0 +1,6 @@
+[
+  { "check": "nav", "target": "a.nav__logo.lockup", "reason": "CLAUDE.md fixes the nav lockup as the spark plus 'Claude Builder Club' with 'IIT Delhi' under it: the second line is the brief's, not a wrapping link" },
+  { "check": "cta", "target": "article.card.update:nth-of-type(3)", "reason": "the '$50' in this update is a member perk quoted from content/site.config.js, not a price; nothing is sold, and Join the club is on every screen's nav" },
+  { "check": "moment-none", "target": "(the page)", "reason": "CLAUDE.md Motion: only the hero URL typing, the section fade-ups and the hover layer move; nothing else moves, so no moment is dealt" },
+  { "check": "hero-enter", "target": "section.hero", "reason": "CLAUDE.md Motion lists only the URL typing, fade-ups and hover ('Nothing else moves'); the entrance also cost Lighthouse mobile 85 vs 99 (brief: 90+)" }
+]

@@ -1,4 +1,19 @@
-.taste-skill/
+.taste-skill/*
+!.taste-skill/waivers.json
+!.taste-skill/gate.json
+shots/
 node_modules/
 .DS_Store
 .vercel
+
+# design kit parts this page never loads (copied from the skill; kept out of the repo, see README)
+assets/backgrounds/
+assets/components/
+assets/diagrams/
+assets/effects/
+assets/icons/
+assets/moments/
+assets/objects/
+assets/photos/
+assets/scenes/
+assets/layout/img/

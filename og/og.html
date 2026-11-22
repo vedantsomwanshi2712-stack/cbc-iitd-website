@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- Source of share.jpg (the 1200x630 link card). Rebuild: see README.md, "Open Graph image". -->
+<html lang="en"><head><meta charset="utf-8"><title>OG card</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..500;1,6..72,400&family=Hanken+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #faf9f5; --ink: #1f1e1d; --accent: #da7757; --muted: #6a6966; }
+  html, body { margin: 0; }
+  body { width: 1200px; height: 630px; background: var(--bg); color: var(--ink); font-family: "Hanken Grotesk", system-ui, sans-serif; display: grid; grid-template-columns: 720px 480px; overflow: hidden; }
+  .words { padding: 64px 0 56px 72px; display: flex; flex-direction: column; }
+  .lockup { display: flex; align-items: center; gap: 14px; }
+  .lockup img { width: 44px; height: 44px; }
+  .lockup b { display: block; font: 500 28px/1 "Newsreader", serif; letter-spacing: -0.01em; }
+  .lockup span { display: block; font: 500 17px/1 "Hanken Grotesk", sans-serif; color: var(--muted); margin-top: 6px; }
+  h1 { font: 400 64px/1.04 "Newsreader", serif; letter-spacing: -0.025em; margin: 56px 0 0; max-width: 13ch; }
+  .ask { font: italic 400 27px/1.3 "Newsreader", serif; margin: 26px 0 0; max-width: 30ch; }
+  .url { margin-top: auto; font: 500 22px/1 ui-monospace, Menlo, monospace; }
+  .art { background: var(--accent); position: relative; }
+  .art svg { position: absolute; inset: 40px 24px 40px 24px; width: calc(100% - 48px); height: calc(100% - 80px); }
+  .d-line { stroke: var(--ink); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+  .d-fill { fill: var(--bg); }
+</style></head>
+<body>
+  <div class="words">
+    <div class="lockup"><img src="../assets/brand/claude-spark.png" alt=""><div><b>Claude Builder Club</b><span>IIT Delhi</span></div></div>
+    <h1>Build real things with Claude, at IIT&nbsp;Delhi.</h1>
+    <p class="ask">New to AI? Veteran coder? Never written a line of code?</p>
+    <p class="url" id="url"></p>
+  </div>
+  <div class="art">
+    <svg viewBox="0 0 420 460" fill="none" preserveAspectRatio="xMidYMid meet">
+      <path class="d-fill" d="M178 46 L338 14 L280 74 L318 122 L150 156 L206 96 Z"/>
+      <path class="d-fill" d="M196 178 L258 168 L292 196 L300 252 L274 300 L208 306 L172 272 L170 212 Z"/>
+      <path class="d-line" d="M34 304 C104 322 200 330 262 310 C292 300 314 272 338 262 C356 255 366 274 348 287 C370 274 392 284 380 301 C398 296 410 318 386 330 C402 334 398 356 372 356 C346 356 318 362 304 380 C338 374 372 382 362 400 C344 414 292 410 248 424"/>
+    </svg>
+  </div>
+  <script src="../content/site.config.js"></script>
+  <script>document.getElementById('url').textContent = (window.SITE && window.SITE.siteUrl) || '';</script>
+</body></html>

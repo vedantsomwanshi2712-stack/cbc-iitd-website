@@ -1,0 +1,215 @@
+/* Page CSS for Claude Builder Club IIT Delhi: the lockup, the hero's type and meetup card, the line
+   drawings, the config-driven lists and the FAQ accordion (the brief asks for one). Tokens only. */
+
+/* the lockup: the spark as supplied, the name in the heading face, IIT Delhi under it */
+.lockup { gap: 10px; }
+.lockup img { width: 30px; height: 30px; flex: none; }
+.lockup__text { display: grid; gap: 2px; }
+.lockup__name { font: 500 19px/1 var(--font-display); letter-spacing: -0.01em; }
+.lockup__place { font: 500 13px/1 var(--font-text); color: var(--muted); letter-spacing: 0; }
+@media (max-width: 639px) { .lockup { gap: 8px; } .lockup img { width: 24px; height: 24px; } .lockup__name { font-size: 16px; } .nav__actions .btn { padding-inline: var(--s-4); } }
+.lockup--foot img { width: 40px; height: 40px; }
+.lockup--foot .lockup__name { font-size: 26px; }
+.lockup--foot .lockup__place { font-size: 14px; }
+
+/* nav: six words in the middle; they fit from 1180, below that the sheet takes over */
+@media (min-width: 1024px) and (max-width: 1239px) { .nav--centre .nav__links { gap: var(--s-4); } .nav--centre .nav__link { font-size: 14px; } }
+
+/* the hero */
+.hero__words { position: relative; z-index: 1; }
+.hero__label { font: 500 var(--t-label)/1.2 var(--font-text); color: var(--muted); margin: 0 0 var(--s-4); }
+.hero .hero__lead { max-width: 34ch; font-size: clamp(20px, .8vw + 15px, 24px); line-height: 1.4; }
+.ask { display: block; font-family: var(--font-display); font-style: italic; font-size: 1.08em; letter-spacing: -0.005em; }
+.hero__answer { display: block; margin-top: var(--s-2); font-weight: 500; }
+.hero__url { margin: var(--s-4) 0 0; font: 500 16px/1.5 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; color: var(--ink); min-height: 24px; }
+.caret { display: inline-block; width: 2px; height: 1.1em; margin-left: 2px; vertical-align: -0.18em; background: var(--action); animation: caret 1s steps(1) infinite; }
+.hero__url.is-done .caret { animation: caret 1s steps(1) 4 forwards; }
+@keyframes caret { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .caret { animation: none !important; } }
+.hero--statement .btn-row { margin-top: var(--s-5); }
+
+.meetup { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr); row-gap: var(--s-1); max-width: 628px; margin-top: var(--s-5); }
+.meetup__label { font: 500 var(--t-label)/1.4 var(--font-text); color: var(--muted); margin: 0; }
+.meetup p { margin: 0; }
+.meetup__title { font: 500 var(--t-card)/1.3 var(--font-text); }
+.meetup__meta { font-size: var(--t-body); line-height: 1.5; color: var(--ink); }
+.meetup__count { font: 400 var(--t-lead)/1.3 var(--font-display); font-style: italic; }
+
+.hero-drawing { position: absolute; right: 0; top: 50%; translate: 0 -54%; width: min(38%, 470px); margin: 0; z-index: 0; }
+.hero-drawing svg { width: 100%; height: auto; display: block; }
+.hero--statement .hero__in { position: relative; }
+@media (max-width: 1023px) {
+  .hero-drawing { width: 34%; top: auto; bottom: 0; translate: 0 0; }
+}
+@media (max-width: 639px) {
+  .hero-drawing { display: none; }
+  .hero__label { margin-bottom: var(--s-3); }
+  .hero .hero__lead { font-size: 18px; }
+  .hero__url { font-size: 15px; margin-top: var(--s-3); }
+  .meetup { margin-top: var(--s-4); }
+  .meetup__meta { font-size: 15px; line-height: 1.4; }
+}
+
+/* line drawings: one brush stroke in the ink, flat terracotta shapes (after the official join post) */
+.draw { margin: 0; color: var(--ink); }
+.draw svg, svg.draw { display: block; width: 100%; height: auto; }
+.d-line { stroke: currentColor; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+.d-fill { fill: var(--accent); }
+.d-fill--soft { fill: color-mix(in oklab, var(--accent) 45%, var(--bg)); }
+.frame.draw { background: none; border: 0; border-radius: 0; overflow: visible; padding: 0; }
+
+/* about */
+.points { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6) var(--gutter); }
+.points li { display: grid; gap: var(--s-2); align-content: start; padding-top: var(--s-4); border-top: 1px solid var(--line); }
+.points h3, .perk__title, .member__name, .update__title, .project__title { font: 500 var(--t-card)/1.3 var(--font-text); letter-spacing: -0.01em; margin: 0; }
+.points p { margin: 0; font-size: var(--t-body); line-height: 1.6; }
+.draw--about svg { height: 520px; }
+@media (max-width: 1023px) { .draw--about svg { height: 300px; } }
+@media (max-width: 639px) { .points { grid-template-columns: minmax(0, 1fr); gap: var(--s-4); } .draw--about svg { height: 280px; } }
+
+/* what we do */
+.act { gap: var(--s-2); }
+.act__panel { height: 220px; margin-bottom: var(--s-5); display: flex; align-items: center; justify-content: center; border-radius: var(--r-md); background: color-mix(in oklab, var(--bg) 70%, var(--card)); }
+.act__art { width: 86%; max-width: 240px; height: auto; color: var(--ink); }
+.act__art .d-line { stroke-width: 4; }
+.card.act > .act__when { font: 500 var(--t-label)/1.4 var(--font-text); color: var(--muted); margin: 0; }
+.act > h3 { margin: 0; }
+.act > p { margin: 0; }
+.act__link { padding-top: var(--s-2); }
+@media (max-width: 1023px) and (min-width: 640px) { #what-we-do .grid > .act { grid-column: auto / span 6; } }
+@media (max-width: 1023px) and (min-width: 640px) { .act__panel { height: 120px; } }
+@media (max-width: 639px) { #what-we-do .grid > .act { grid-column: 1 / -1; } .act__panel { height: 136px; margin-bottom: var(--s-4); } .act__art { width: 60%; max-width: 200px; } }
+
+/* perks (the dark band) */
+.perks { list-style: none; margin: 0; padding: 0; }
+.perks { margin: 0; }
+.perk { display: grid; gap: var(--s-2); padding: var(--s-5) 0; border-bottom: 1px solid var(--line); }
+.perk__title { font: 500 var(--t-card)/1.3 var(--font-text); }
+.perk:first-child { padding-top: 0; }
+
+.perk__body { margin: 0; color: var(--ink); font-size: var(--t-body); line-height: 1.6; max-width: 52ch; }
+.draw--perks { max-width: 440px; margin-top: var(--s-7); }
+@media (max-width: 1023px) { .draw--perks { max-width: none; margin-top: var(--s-4); } .draw--perks svg { height: 240px; } }
+@media (max-width: 639px) { .draw--perks { max-width: none; margin-top: 0; } .draw--perks svg { height: 200px; } .perk { padding: var(--s-2) 0; gap: 2px; } .perk__body { line-height: 1.5; } #perks .section-head { margin-bottom: var(--s-4); } }
+
+/* updates and projects */
+.update, .project { gap: var(--s-3); }
+.card.update > .update__tag { font: 500 var(--t-label)/1.4 var(--font-text); color: var(--muted); margin: 0; }
+.update__body, .project__body { margin: 0; font-size: var(--t-body); line-height: 1.6; }
+.project__by { margin: 0; font-size: var(--t-label); color: var(--muted); }
+.update__link { color: inherit; text-decoration: none; }
+.update__link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.update, .project { position: relative; }
+@media (max-width: 1023px) and (min-width: 640px) { .updates > .update, .projects > .project { grid-column: auto / span 4; } }
+@media (max-width: 639px) { .updates > .update, .projects > .project { grid-column: 1 / -1; min-height: 0; } }
+.empty__title { font: var(--display-weight) var(--t-h3)/1.2 var(--font-display); letter-spacing: var(--display-tracking); margin: 0 0 var(--s-4); }
+.empty__text .btn-row { margin-top: var(--s-6); }
+.draw--projects svg { height: 400px; }
+@media (max-width: 1023px) { .draw--projects svg { height: 260px; } }
+@media (max-width: 639px) { .draw--projects svg { height: 200px; } }
+
+/* team: photo slots show the initials until a photo is set in the config */
+.team { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6) var(--gutter); }
+.member { display: grid; gap: var(--s-2); align-content: start; }
+.member__photo { aspect-ratio: 4 / 5; border-radius: var(--r-lg); background: var(--surface); overflow: hidden; display: grid; place-items: center; margin-bottom: var(--s-3); border: 1px dashed color-mix(in oklab, var(--ink) 22%, transparent); }
+.member__photo img { width: 100%; height: 100%; object-fit: cover; }
+.member__photo:has(img) { border: 0; }
+.member__initials { font: var(--display-weight) clamp(56px, 4vw + 20px, 96px)/1 var(--font-display); font-style: italic; color: var(--ink); letter-spacing: -0.02em; }
+.member__name { margin: 0; }
+.member__role { margin: 0; color: var(--muted); font-size: var(--t-small); }
+@media (max-width: 639px) { .member__photo { aspect-ratio: 1 / 1; } }
+
+/* FAQ: an accordion (the brief asks for one; the kit's .faq keeps answers open) */
+.qa { list-style: none; margin: 0; padding: 0; }
+.qa__item { border-bottom: 1px solid var(--line); }
+.qa__h { margin: 0; }
+.qa__q { all: unset; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); width: 100%; min-height: 64px; padding: var(--s-4) 0;
+  font: 500 var(--t-card)/1.35 var(--font-text); color: var(--ink); cursor: pointer; }
+.qa__q::after { content: ""; flex: none; width: 12px; height: 12px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; rotate: 45deg; translate: 0 -3px; transition: rotate var(--dur, 150ms) var(--ease); }
+.qa__q[aria-expanded="true"]::after { rotate: 225deg; translate: 0 3px; }
+.qa__q:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; border-radius: 2px; }
+@media (hover: hover) and (pointer: fine) { .qa__q:hover { color: color-mix(in oklab, var(--ink) 75%, var(--bg)); } }
+.qa__a { padding: 0 0 var(--s-5); }
+.qa__a p { margin: 0; font-size: var(--t-body); line-height: 1.6; max-width: 56ch; }
+.draw--faq { margin-top: var(--s-6); }
+@media (max-width: 1023px) { .draw--faq { max-width: 160px !important; margin-top: 0; } }
+@media (max-width: 639px) { .draw--faq { max-width: none !important; margin-bottom: var(--s-4); } .draw--faq svg { height: 110px; } .qa__q { min-height: 52px; padding: var(--s-3) 0; font-size: 17px; } .qa__a { padding-bottom: var(--s-4); } }
+@media (prefers-reduced-motion: reduce) { .qa__q::after { transition: none; } }
+
+/* the close */
+
+.close__row .section-head { margin-bottom: 0; }
+svg.close__art { width: 100%; height: 180px; color: var(--ink); }
+@media (max-width: 1023px) { svg.close__art { display: none; } }
+.closing__cta.close--type > .btn--xl { margin-top: var(--s-6); }
+.footer__note { margin: 0; color: var(--muted); font-size: var(--t-small); max-width: 34ch; line-height: 1.5; }
+
+
+/* sections fade up once as they come into view (brief); site.js adds .fade-up only below the fold, with script, without reduced motion */
+html.js-fade .fade-up { opacity: 0; transform: translateY(16px); transition: opacity 700ms var(--m-ease-enter, cubic-bezier(.22,1,.36,1)), transform 700ms var(--m-ease-enter, cubic-bezier(.22,1,.36,1)); }
+html.js-fade .fade-up.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .fade-up { opacity: 1; transform: none; transition: none; } }
+
+/* projects: how a project gets here */
+.steps-list { list-style: none; margin: var(--s-6) 0 0; padding: 0; display: grid; gap: 0; max-width: 560px; }
+.steps-list li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: var(--s-3); padding: var(--s-4) 0; border-bottom: 1px solid var(--line); font-size: var(--t-body); line-height: 1.6; }
+.steps-list li:first-child { border-top: 1px solid var(--line); }
+.steps-list__n { font: 400 var(--t-h3)/1 var(--font-display); font-style: italic; }
+.draw--team { max-width: 300px; margin-top: var(--s-7); }
+@media (max-width: 1023px) { .draw--team { display: none; } }
+@media (max-width: 639px) { .draw--team { display: block; margin: 0 0 var(--s-5); max-width: none; } .draw--team svg { height: 170px; } .member__photo { aspect-ratio: 4 / 5 !important; } }
+.draw--faq { max-width: 300px; }
+/* a very narrow phone (under 360): the lockup and the menu button keep the bar; Join stays in the hero and the sheet */
+@media (max-width: 359px) { .nav:not(.is-open) .nav__actions { display: none; } .nav:not(.is-open) .nav__toggle { margin-left: auto; } }
+
+/* focus: the kit's 2px ring, in the ink (terracotta on cream is under 3:1) */
+:focus-visible { outline-color: var(--ink); }
+.nav__link { white-space: nowrap; }
+/* hero facts: one plain line of the first screen's hard facts */
+.hero-line { position: relative; z-index: 1; margin: var(--s-6) 0 0; font-size: var(--t-body); font-weight: 500; line-height: 1.5; color: var(--ink); max-width: none; }
+@media (max-width: 639px) { .hero-line { margin-top: var(--s-4); font-size: 15px; } }
+/* update cards: a drawing panel under the words */
+.update__panel { order: -1; height: 260px; margin-bottom: var(--s-3); display: flex; align-items: center; justify-content: center; border-radius: var(--r-md); background: color-mix(in oklab, var(--bg) 70%, var(--card)); }
+.update__panel svg { width: 60%; max-width: 240px; height: auto; color: var(--ink); }
+.update__panel .d-line { stroke-width: 4; }
+@media (min-width: 640px) and (max-width: 1023px) { .update__panel { height: 180px; } }
+@media (max-width: 639px) { .update__panel { height: 250px; } .update__panel svg { width: 56%; } }
+@media (min-width: 640px) and (max-width: 1023px) { .footer .closing__links .footer__col { grid-column: auto / span 4; } }
+
+/* about: two groups; on a desktop the second group's drawing sits in the right column beside both rows of points */
+@media (min-width: 640px) {
+  .about { grid-template-rows: auto 1fr; }
+  .about__a { grid-row: 1; }
+  .about__b { display: contents; }
+  .about__b > .draw--about { grid-column: 7 / span 6; grid-row: 1 / span 2; }
+  .about__b > .points { grid-column: 1 / span 6; grid-row: 2; margin-top: var(--s-6); }
+}
+@media (min-width: 640px) and (max-width: 1023px) { .about__b > .draw--about { grid-column: 1 / -1; grid-row: 3; } .about__a, .about__b > .points { grid-column: 1 / -1; } }
+@media (max-width: 639px) { .about__b { display: grid; gap: var(--s-5); align-content: start; } .about__b .draw--about svg { height: 300px; } }
+
+.invite { margin: var(--s-6) 0 0; font-size: var(--t-body); }
+.invite .link { margin-left: var(--s-2); }
+@media (max-width: 1023px) {
+  .qa__item { border-bottom: 0; }
+  .qa__item + .qa__item { margin-top: var(--s-2); }
+  .qa__item + .qa__item { margin-top: var(--s-1); }
+}
+@media (min-width: 640px) and (max-width: 1023px) { #projects .empty > * { grid-column: 1 / -1; } .draw--projects svg { height: 300px; } }
+
+/* 1024 to 1279 (a laptop, 768 tall): the about points run four across under the head and the drawing, and the
+   picture panels step down, so each section stays one screen */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .about__a { display: contents; }
+  .about__a > .section-head { grid-column: 1 / span 6; grid-row: 1; }
+  .about__a > .points { grid-column: 1 / span 6; grid-row: 2; }
+  .about__b > .draw--about { grid-column: 7 / span 6; grid-row: 1; }
+  .about__b > .points { grid-column: 7 / span 6; grid-row: 2; margin-top: 0; }
+  .draw--about svg { height: 240px; }
+  .act__panel { height: 104px; margin-bottom: var(--s-4); }
+  .invite { margin-top: var(--s-5); }
+  .update__panel { height: 200px; }
+  svg.close__art { height: 140px; }
+}
+@media (min-width: 640px) and (max-width: 1023px) { .draw--perks svg { height: 216px; } }
+.lockup__name, .lockup__place { white-space: nowrap; }
+@media (max-width: 639px) { svg.close__art { display: block; height: 150px; margin-top: var(--s-5); } }

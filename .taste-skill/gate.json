@@ -1,0 +1,405 @@
+{
+ "start": "2026-11-22T00:23:25.967Z",
+ "round": 0,
+ "idle": 0,
+ "errors": 0,
+ "status": "pass",
+ "history": [
+  {
+   "at": "2026-11-22T01:43:56.833Z",
+   "mode": "manual",
+   "status": "pass",
+   "fails": 0,
+   "round": 0,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "index.html",
+  "url": null,
+  "root": null,
+  "kind": "service",
+  "category": "Claude Builder Club for IIT Delhi students: meetups, workshops, hackathon, projects, perks and team",
+  "primary": "Join the club",
+  "rounds": 3,
+  "start": "2026-11-22T00:23:25.967Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "fp": "897a5650c2c633d1",
+ "page": "index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "nav",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > a.nav__logo.lockup \"Claude Builder Club IIT Delhi\"",
+    "msg": "nav link wraps to a second line",
+    "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "nav"
+    ],
+    "wheres": [
+     "header.nav.nav--centre > div.wrap.nav__bar > a.nav__logo.lockup \"Claude Builder Club IIT Delhi\""
+    ]
+   },
+   {
+    "check": "cta",
+    "where": "section#updates > div.wrap.fade-up > div.grid.updates > article.card.update:nth-of-type(3) \"Hackathon Campus-wide hackathon this spr\"",
+    "msg": "1 priced card with no action in or under it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "cta"
+    ],
+    "wheres": [
+     "section#updates > div.wrap.fade-up > div.grid.updates > article.card.update:nth-of-type(3) \"Hackathon Campus-wide hackathon this spr\""
+    ]
+   },
+   {
+    "check": "hero-enter",
+    "where": "main#top > section.hero.hero--statement",
+    "msg": "the hero does not enter on load: no data-enter on the hero and no head line setting html.m-enter (motion.md, The hero's entrance)",
+    "fix": "put data-enter on the hero <section> and keep the head line from starter.html that sets html.m-enter",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-enter"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--statement"
+    ]
+   },
+   {
+    "check": "moment-none",
+    "where": "(the page)",
+    "msg": "a service page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+    "fix": "deal one (moments.mjs pick --page service --photo) and mount it in its own section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "moment-none"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "no-visual",
+    "where": "section#perks \"Member perks.\"",
+    "msg": "pictures, effects and mocks cover 19% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#top > section.hero.hero--statement / section#about",
+    "msg": "186px between these sections, -43% against the median 327px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#what-we-do / section#perks",
+    "msg": "271px between these sections, -41% against the median 456px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#team / section#faq",
+    "msg": "442px between these sections, +35% against the median 327px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#perks / section#updates",
+    "msg": "uneven space at the edge of a band: 122px outside its edge, 334px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(6) > a.nav__link \"FAQ\"",
+    "msg": "\"FAQ\" opens a section headed \"Questions before you join.\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "header.nav.nav--centre",
+    "msg": "the nav stays on screen with 6 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-empty",
+    "where": "div.wrap > div.hero-text.hero__in > figure.hero-drawing.draw > svg \"drawing (svg)\"",
+    "msg": "the drawing (svg) is nearly empty at 1440px: 4 colours in its 470x515px, 82.7% one colour (a thin line drawing or a logo can be this plain: look at it)",
+    "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-empty",
+    "where": "div.wrap.grid > div.about__b > figure.draw.draw--about > svg \"drawing (svg)\"",
+    "msg": "the drawing (svg) is nearly empty at 1440px: 4 colours in its 628x520px, 91% one colour (a thin line drawing or a logo can be this plain: look at it)",
+    "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-empty",
+    "where": "div.wrap.grid > div.span-5 > figure.draw.draw--perks > svg \"drawing (svg)\"",
+    "msg": "the drawing (svg) is nearly empty at 1440px: 5 colours in its 440x269px, 76.2% one colour (a thin line drawing or a logo can be this plain: look at it)",
+    "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-empty",
+    "where": "div.wrap.fade-up > div.closing__cta.close--type > div.close__row.grid > svg.close__art.draw \"drawing (svg)\"",
+    "msg": "the drawing (svg) is nearly empty at 1440px: 3 colours in its 628x180px, 93.4% one colour (a thin line drawing or a logo can be this plain: look at it)",
+    "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"join the club (opens the join form in a \"",
+    "msg": "\"join the club (opens the join form in a new tab)\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#projects / section#team",
+    "msg": "493px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)",
+    "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#projects \"Projects by members. Be the first to sho\"",
+    "msg": "the content fills 45.2% of the section's height (407 of 900px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#perks \"Member perks. For members of the club. J\"",
+    "msg": "the content fills 48.2% of the section's height (434 of 900px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#faq \"Questions before you join. Do I need to \"",
+    "msg": "the content fills 48.7% of the section's height (439 of 900px): 55% or more (40% WARN) (and 1 more like it: \"The team running the clu\") (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > button.nav__toggle",
+    "msg": "the nav is lopsided: its last item ends 13px inside the content's edge (366px), while its first starts on the other edge",
+    "fix": "start the nav's first item and end its last on the content's two edges",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#about \"A student club for building with Claude.\"",
+    "msg": "pictures, effects and mocks cover 19% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#about \"A student club for building with Claude.\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#updates \"Club updates.\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#faq / footer#contact",
+    "msg": "258px between these sections, +27% against the median 203px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-footer-signoff",
+    "msg": "a sign-off line in the footer",
+    "fix": "the footer holds facts: the brand, the year, Privacy, Terms, the credits line (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy x1: \"Built with Claude by ...\"",
+    "exact": false
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 135,
+   "layout": 4
+  }
+ },
+ "open": [],
+ "waived": [
+  {
+   "check": "nav",
+   "where": "header.nav.nav--centre > div.wrap.nav__bar > a.nav__logo.lockup \"Claude Builder Club IIT Delhi\"",
+   "msg": "nav link wraps to a second line",
+   "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "nav"
+   ],
+   "wheres": [
+    "header.nav.nav--centre > div.wrap.nav__bar > a.nav__logo.lockup \"Claude Builder Club IIT Delhi\""
+   ],
+   "reason": "CLAUDE.md fixes the nav lockup as the spark plus 'Claude Builder Club' with 'IIT Delhi' under it: the second line is the brief's, not a wrapping link"
+  },
+  {
+   "check": "cta",
+   "where": "section#updates > div.wrap.fade-up > div.grid.updates > article.card.update:nth-of-type(3) \"Hackathon Campus-wide hackathon this spr\"",
+   "msg": "1 priced card with no action in or under it",
+   "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "cta"
+   ],
+   "wheres": [
+    "section#updates > div.wrap.fade-up > div.grid.updates > article.card.update:nth-of-type(3) \"Hackathon Campus-wide hackathon this spr\""
+   ],
+   "reason": "the '$50' in this update is a member perk quoted from content/site.config.js, not a price; nothing is sold, and Join the club is on every screen's nav"
+  },
+  {
+   "check": "hero-enter",
+   "where": "main#top > section.hero.hero--statement",
+   "msg": "the hero does not enter on load: no data-enter on the hero and no head line setting html.m-enter (motion.md, The hero's entrance)",
+   "fix": "put data-enter on the hero <section> and keep the head line from starter.html that sets html.m-enter",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-enter"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--statement"
+   ],
+   "reason": "CLAUDE.md Motion lists only the URL typing, fade-ups and hover ('Nothing else moves'); the entrance also cost Lighthouse mobile 85 vs 99 (brief: 90+)"
+  },
+  {
+   "check": "moment-none",
+   "where": "(the page)",
+   "msg": "a service page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+   "fix": "deal one (moments.mjs pick --page service --photo) and mount it in its own section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "moment-none"
+   ],
+   "wheres": [
+    "(the page)"
+   ],
+   "reason": "CLAUDE.md Motion: only the hero URL typing, the section fade-ups and the hover layer move; nothing else moves, so no moment is dealt"
+  }
+ ],
+ "warnCount": 22,
+ "at": "2026-11-22T01:43:56.833Z"
+}

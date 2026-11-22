@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en" data-type="service" data-radius="soft" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Builder Club IIT Delhi: a student club for building with Claude</title>
+<meta name="description" content="IIT Delhi's Claude Builder Club, part of Anthropic's student program. Monthly meetups, hands-on workshops and a spring hackathon, open to every branch and year. Free to join.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Claude Builder Club IIT Delhi">
+<meta property="og:description" content="Meetups, workshops and a spring hackathon for every IIT Delhi student who wants to build with Claude. Free to join.">
+<meta property="og:image" content="share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Claude Builder Club, IIT Delhi: Build real things with Claude.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/claude-spark.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/brand/claude-spark.png">
+<meta name="theme-color" content="#faf9f5">
+<!-- <link rel="canonical" href="https://the club's domain/"> once the domain is known -->
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- start.mjs brand printed Newsreader:opsz,wght; the ital axis is added because the brief asks for a serif with a real italic -->
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..500&family=Hanken+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<style>
+:root {
+  --p-bg: #faf9f5; --p-surface: #eeede9; --p-ink: #1f1e1d; --p-muted: #6a6966;
+  --p-accent: #da7757; --p-accent-ink: #111111; --p-action: #da7757; --p-action-ink: #111111;
+  --p-inv-bg: #1f1e1d; --p-inv-surface: #2c2b29; --p-inv-ink: #faf9f5; --p-inv-muted: #9f9e9b;
+  --p-inv-accent: #da7757; --p-inv-accent-ink: #111111; --p-inv-action: #da7757; --p-inv-action-ink: #111111;
+  --font-display: "Newsreader", Georgia, serif;
+  --font-text: "Hanken Grotesk", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.018em;
+  --display-tracking-xl: -0.025em;
+  --ly-scale: 1.06;
+}
+</style>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<!-- type: service (site-kind other)
+     deal: hero statement (film dealt first, needs a film or photograph: dealt again), nav nav-centre (nav-split dealt first:
+     six nav words and a photo panel do not fit it), close close-type, footer footer-dark, rhythm dark-band (#perks),
+     buttons solid, mark ring replaced by the client's logo (claude-spark.png)
+     moments: none (CLAUDE.md: only the URL typing, the section fade-ups and the hover layer move)
+     Everything that changes week to week is read from content/site.config.js by js/site.js. -->
+<header class="nav nav--centre">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="nav__logo lockup" href="#top">
+      <img src="assets/brand/claude-spark.png" alt="" width="215" height="215">
+      <span class="lockup__text"><span class="lockup__name">Claude Builder Club</span><span class="lockup__place">IIT Delhi</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item"><a class="nav__link" href="#about">About</a></div>
+      <div class="nav__item"><a class="nav__link" href="#what-we-do">What we do</a></div>
+      <div class="nav__item"><a class="nav__link" href="#perks">Perks</a></div>
+      <div class="nav__item"><a class="nav__link" href="#projects">Projects</a></div>
+      <div class="nav__item"><a class="nav__link" href="#team">Team</a></div>
+      <div class="nav__item"><a class="nav__link" href="#faq">FAQ</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" data-join>Join the club</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<main id="top">
+
+  <section class="hero hero--statement" aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text hero__in">
+      <div class="hero__words">
+        <p class="hero__label">Claude Builder Club · IIT Delhi</p>
+        <h1 id="hero-h">Build real things with Claude, at IIT&nbsp;Delhi.</h1>
+        <p class="hero__lead"><em class="ask">New to AI? Veteran coder? Never written a line of code?</em> <span class="hero__answer">Everyone is a builder with AI.</span></p>
+        <p class="hero__url" data-site-url hidden><span class="sr-only" data-site-url-text></span><span class="hero__url-typed" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span></p>
+        <div class="btn-row">
+          <a class="btn btn--primary" data-join>Join the club<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#what-we-do">See what we do</a>
+        </div>
+        <p class="hero-line">Monthly meetups&nbsp;· 2&nbsp;workshops a term&nbsp;· A&nbsp;hackathon in spring&nbsp;· Free to&nbsp;join</p>
+      </div>
+      <div class="meetup" data-meetup hidden>
+        <p class="meetup__label">Next meetup</p>
+        <p class="meetup__title" data-meetup-title></p>
+        <p class="meetup__meta" data-meetup-meta></p>
+        <p class="meetup__count" data-meetup-count aria-live="off"></p>
+      </div>
+      <figure class="hero-drawing draw" aria-hidden="true">
+        <svg viewBox="0 0 420 460" fill="none">
+          <path class="d-fill" d="M178 46 L338 14 L280 74 L318 122 L150 156 L206 96 Z"/>
+          <path class="d-fill d-fill--soft" d="M196 178 L258 168 L292 196 L300 252 L274 300 L208 306 L172 272 L170 212 Z"/>
+          <path class="d-line" d="M34 304 C104 322 200 330 262 310 C292 300 314 272 338 262 C356 255 366 274 348 287 C370 274 392 284 380 301 C398 296 410 318 386 330 C402 334 398 356 372 356 C346 356 318 362 304 380 C338 374 372 382 362 400 C344 414 292 410 248 424"/>
+        </svg>
+      </figure>
+    </div></div>
+  </section>
+
+  <section class="section g2m" id="about" aria-labelledby="about-h">
+    <div class="wrap grid grid--top about">
+      <div class="span-6 about__a">
+        <div class="section-head">
+          <h2 id="about-h">A student club for building with Claude.</h2>
+          <p class="t-lead">Claude is an AI model made by Anthropic. Claude Builder Clubs are Anthropic's official student-led campus communities, and this is the one at IIT&nbsp;Delhi.</p>
+        </div>
+        <ul class="points">
+          <li><h3>Open to students of every branch and year</h3><p>First year or final year, any department. You don't need to be from CS.</p></li>
+          <li><h3>A club for beginners and experienced coders</h3><p>Never written code? We start from the first step. Already shipping? Bring your project.</p></li>
+        </ul>
+      </div>
+      <div class="about__b">
+        <figure class="draw draw--about frame" role="img" aria-label="Line drawing: two hands passing a building block between them">
+        <svg viewBox="0 0 440 440" preserveAspectRatio="xMidYMin meet" fill="none" aria-hidden="true">
+          <path class="d-fill" d="M168 120 L262 104 L284 196 L190 214 Z"/>
+          <path class="d-fill d-fill--soft" d="M196 222 L276 206 L290 262 L210 278 Z"/>
+          <path class="d-line" d="M24 300 C70 304 118 300 150 284 C172 272 186 252 204 248 C222 244 226 262 210 272 C196 282 176 290 168 300 C196 296 224 300 236 318 C214 326 188 326 168 334 C140 346 96 352 40 350"/>
+          <path class="d-line" d="M416 236 C370 232 330 240 306 256 C290 266 280 286 262 290 C246 294 242 276 258 266 C272 258 290 252 296 240 C270 244 242 238 232 222 C252 214 278 214 296 206 C322 194 362 186 412 188"/>
+        </svg>
+      </figure>
+        <ul class="points">
+          <li><h3>Projects you care about</h3><p>A tool for your hostel, a helper for a course, a script for your research. You choose what to build.</p></li>
+          <li><h3>Meetups, workshops and talks</h3><p>Meet other students who are building things, and work on your projects together.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="what-we-do" style="--hm: 2" aria-labelledby="wwd-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="wwd-h">Meetups, workshops and a hackathon.</h2>
+      </div>
+      <div class="grid">
+        <article class="card m-nolift span-3 act">
+          <div class="act__panel" role="img" aria-label="Line drawing: three people around a table"><svg class="act__art" viewBox="0 0 160 96" fill="none" aria-hidden="true"><path class="d-fill d-fill--soft" d="M58 46 L102 46 L104 58 L56 58 Z"/><path class="d-line" d="M10 72 C50 66 110 66 150 72 M30 72 L26 90 M130 72 L134 90"/><circle class="d-line" cx="40" cy="38" r="11"/><circle class="d-line" cx="80" cy="26" r="11"/><circle class="d-line" cx="120" cy="38" r="11"/></svg></div>
+          <p class="act__when">Every month</p>
+          <h3>Monthly meetups</h3>
+          <p>Learn one thing, build for a while, then show what you made.</p>
+        </article>
+        <article class="card m-nolift span-3 act">
+          <div class="act__panel" role="img" aria-label="Line drawing: a laptop with a terminal prompt"><svg class="act__art" viewBox="0 0 160 96" fill="none" aria-hidden="true"><path class="d-fill" d="M34 14 L126 14 L126 66 L34 66 Z" opacity=".18"/><path class="d-line" d="M34 14 L126 14 L126 66 L34 66 Z M14 84 C50 78 110 78 146 84 M34 66 L14 84 M126 66 L146 84 M50 32 L62 40 L50 48 M70 50 L88 50"/></svg></div>
+          <p class="act__when">Two a term</p>
+          <h3>Hands-on workshops</h3>
+          <p>Claude Code and Skills first, then Building Agents, Building with MCP and an AI Research Salon.</p>
+        </article>
+        <article class="card m-nolift span-3 act">
+          <div class="act__panel" role="img" aria-label="Line drawing: a flag on a hill"><svg class="act__art" viewBox="0 0 160 96" fill="none" aria-hidden="true"><path class="d-fill" d="M82 12 L132 22 L82 40 Z"/><path class="d-line" d="M80 10 L80 82 M14 86 C46 70 112 70 148 86"/></svg></div>
+          <p class="act__when">Spring</p>
+          <h3>Campus-wide hackathon</h3>
+          <p>Build something with Claude, then demo it to the whole campus.</p>
+        </article>
+        <article class="card m-nolift span-3 act">
+          <div class="act__panel" role="img" aria-label="Line drawing: a megaphone"><svg class="act__art" viewBox="0 0 160 96" fill="none" aria-hidden="true"><path class="d-fill" d="M70 30 L118 12 L118 78 L70 60 Z"/><path class="d-line" d="M30 34 L70 30 L70 60 L30 56 Z M42 58 L50 84 L62 84 L58 60 M130 30 C138 38 138 52 130 60 M140 22 C154 36 154 54 140 68"/></svg></div>
+          <p class="act__when">On request</p>
+          <h3>Campus sessions</h3>
+          <p>A 10-minute demo for your club, class or hostel.</p>
+        </article>
+      </div>
+      <p class="invite">Want a demo for your club, class or hostel? <a class="link" data-join data-join-label="Invite us">Invite us</a></p>
+    </div>
+  </section>
+
+  <section class="section ground-inverse" id="perks" aria-labelledby="perks-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="perks-h">Member perks.</h2>
+          <p class="t-lead">For members of the club. Join first, then check in at a meetup.</p>
+        </div>
+        <figure class="draw draw--perks frame" role="img" aria-label="Line drawing: a cap next to a sheet of stickers">
+          <svg viewBox="0 0 360 220" preserveAspectRatio="xMinYMid meet" fill="none" aria-hidden="true">
+            <path class="d-fill" d="M40 142 C38 92 78 56 130 56 C182 56 218 92 218 142 Z"/>
+            <path class="d-line" d="M30 142 L218 142 C254 142 290 150 316 166 C284 174 240 166 212 154 M130 58 C116 88 114 118 120 142"/>
+            <circle class="d-line" cx="130" cy="50" r="6"/>
+            <path class="d-line" d="M262 10 L338 4 L344 104 L268 110 Z"/>
+            <circle class="d-fill d-fill--soft" cx="302" cy="40" r="15"/>
+            <path class="d-fill" d="M288 76 L302 64 L316 76 L308 92 L294 92 Z"/>
+          </svg>
+        </figure>
+      </div>
+      <dl class="perks span-6 start-7" data-perks></dl>
+    </div>
+  </section>
+
+  <section class="section" id="updates" style="--hm: 2" aria-labelledby="updates-h" data-updates-section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="updates-h">Club updates.</h2>
+      </div>
+      <div class="grid updates" data-updates></div>
+    </div>
+  </section>
+
+  <section class="section" id="projects" aria-labelledby="projects-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="projects-h">Projects by members.</h2>
+      </div>
+      <div class="grid projects" data-projects></div>
+      <div class="grid grid--top empty" data-projects-empty hidden>
+        <div class="span-6 empty__text">
+          <p class="empty__title">Be the first to show what you built.</p>
+          <p class="t-lead">Made something with Claude? Members' projects go up here once they're shown at a meetup.</p>
+          <ol class="steps-list">
+            <li><span class="steps-list__n">1</span>Build something with Claude: a tool, a bot, a site, a research script.</li>
+            <li><span class="steps-list__n">2</span>Show it at a meetup.</li>
+            <li><span class="steps-list__n">3</span>It goes up on this page with your name on it.</li>
+          </ol>
+          <div class="btn-row" data-submit-row hidden></div>
+        </div>
+        <figure class="span-6 start-7 draw draw--projects frame" role="img" aria-label="Line drawing: an open laptop on a desk, waiting for the first project">
+          <svg viewBox="0 0 420 300" preserveAspectRatio="xMidYMin meet" fill="none" aria-hidden="true">
+            <path class="d-fill d-fill--soft" d="M120 60 L300 60 L300 186 L120 186 Z"/>
+            <path class="d-fill" d="M170 96 L250 92 L254 150 L174 154 Z"/>
+            <path class="d-line" d="M120 60 L300 60 L300 186 L120 186 Z M80 214 L340 214 L300 186 M120 186 L80 214 M20 236 C120 226 300 226 400 238 M60 238 L50 290 M360 238 L372 290"/>
+          </svg>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="team" aria-labelledby="team-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="team-h">The team running the club.</h2>
+          <p class="t-lead">Find us at any meetup.</p>
+        </div>
+        <figure class="draw draw--team frame" role="img" aria-label="Line drawing: a name badge on a lanyard">
+          <svg viewBox="0 0 300 260" fill="none" aria-hidden="true">
+            <path class="d-line" d="M40 12 C70 70 110 104 150 118 C190 104 230 70 260 12"/>
+            <path class="d-fill" d="M96 124 L204 120 L210 236 L102 242 Z"/>
+            <path class="d-fill d-fill--soft" d="M116 150 L188 147 L190 172 L118 175 Z"/>
+            <path class="d-line" d="M150 118 L150 132"/>
+          </svg>
+        </figure>
+      </div>
+      <ul class="team span-6 start-7" data-team></ul>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="faq-h">Questions before you join.</h2>
+        </div>
+        <figure class="draw draw--faq frame" role="img" aria-label="Line drawing: a raised hand">
+          <svg viewBox="0 0 300 260" fill="none" aria-hidden="true">
+            <circle class="d-fill" cx="214" cy="70" r="34"/>
+            <path class="d-line" d="M118 250 C114 210 104 176 92 150 C84 132 70 118 74 104 C80 92 94 98 102 112 L112 130 L108 46 C108 30 128 30 130 46 L136 104 L140 28 C142 12 162 14 162 30 L160 104 L172 42 C176 28 194 32 192 48 L182 112 L196 70 C202 56 220 62 216 78 L198 150 C192 180 190 212 194 250"/>
+          </svg>
+        </figure>
+      </div>
+      <ul class="qa span-6 start-7" data-accordion>
+        <li class="qa__item"><div role="heading" aria-level="3" class="qa__h"><button type="button" class="qa__q" aria-expanded="false" aria-controls="qa-1" id="qa-1-q">Do I need to be from CS?</button></div>
+          <div class="qa__a" id="qa-1" role="region" aria-labelledby="qa-1-q" hidden><p>No. The club is open to every branch and every year.</p></div></li>
+        <li class="qa__item"><div role="heading" aria-level="3" class="qa__h"><button type="button" class="qa__q" aria-expanded="false" aria-controls="qa-2" id="qa-2-q">Does it cost anything?</button></div>
+          <div class="qa__a" id="qa-2" role="region" aria-labelledby="qa-2-q" hidden><p>No, it's free.</p></div></li>
+        <li class="qa__item"><div role="heading" aria-level="3" class="qa__h"><button type="button" class="qa__q" aria-expanded="false" aria-controls="qa-3" id="qa-3-q">How do I get the API credits?</button></div>
+          <div class="qa__a" id="qa-3" role="region" aria-labelledby="qa-3-q" hidden><p>Make an account on platform.claude.com with your IIT Delhi email. Then, at a meetup, fill in the check-in form with your Org ID (Settings → Organization).</p></div></li>
+        <li class="qa__item"><div role="heading" aria-level="3" class="qa__h"><button type="button" class="qa__q" aria-expanded="false" aria-controls="qa-4" id="qa-4-q">What happens at a meetup?</button></div>
+          <div class="qa__a" id="qa-4" role="region" aria-labelledby="qa-4-q" hidden><p>A short talk or workshop, time to build, and members showing what they made.</p></div></li>
+        <li class="qa__item"><div role="heading" aria-level="3" class="qa__h"><button type="button" class="qa__q" aria-expanded="false" aria-controls="qa-5" id="qa-5-q">Is this official?</button></div>
+          <div class="qa__a" id="qa-5" role="region" aria-labelledby="qa-5-q" hidden><p>It's a student-led club, part of Anthropic's Claude Builder Club program.</p></div></li>
+        <li class="qa__item"><div role="heading" aria-level="3" class="qa__h"><button type="button" class="qa__q" aria-expanded="false" aria-controls="qa-6" id="qa-6-q">How do I join?</button></div>
+          <div class="qa__a" id="qa-6" role="region" aria-labelledby="qa-6-q" hidden><p>Fill in the <a class="link link--inline" data-join>join form</a>. It takes a couple of minutes.</p></div></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--dark ground-inverse g2m" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="close__row grid grid--top">
+        <div class="section-head span-6">
+          <h2 id="close-h">Ready to build?</h2>
+          <p>Fill in the form and we'll send you the next meetup invite.</p>
+        </div>
+        <svg class="close__art draw span-6 start-7" viewBox="0 0 320 160" preserveAspectRatio="xMaxYMid meet" fill="none" aria-hidden="true">
+          <path class="d-fill" d="M180 40 L300 10 L220 92 L206 64 Z"/>
+          <path class="d-line" d="M206 64 L300 10 M20 140 C60 120 96 112 126 112 C146 112 150 130 134 136 C150 132 164 140 154 152 M126 112 C140 96 156 86 176 82"/>
+        </svg>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" data-join>Join the club<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo lockup lockup--foot" href="#top">
+            <img src="assets/brand/claude-spark.png" alt="" width="215" height="215" loading="lazy">
+            <span class="lockup__text"><span class="lockup__name">Claude Builder Club</span><span class="lockup__place">IIT Delhi</span></span>
+          </a>
+          <p class="footer__note">A student-led club, part of Anthropic's Claude Builder Club program.</p>
+        </div>
+        <div class="span-2 start-7 footer__col"><h3>Club</h3><ul><li><a href="#about">About</a></li><li><a href="#what-we-do">What we do</a></li><li><a href="#perks">Perks</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Members</h3><ul><li><a href="#projects">Projects</a></li><li><a href="#team">Team</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Join</h3><ul><li><a data-join>Join form</a></li><li data-social="instagram" data-label="Instagram" hidden></li><li data-social="linkedin" data-label="LinkedIn" hidden></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Claude Builder Club IIT Delhi</span>
+        <span>Built with Claude by CBC IIT Delhi</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="content/site.config.js"></script>
+<script src="js/site.js"></script>
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>

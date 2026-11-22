@@ -1,6 +1,9 @@
 // Everything that changes week to week lives here. Edit, save, push: the site updates.
 // Leave a value as null to hide that part of the page.
 window.SITE = {
+  // The address the hero types out. Change it once the club has its own domain. null hides the line.
+  siteUrl: "cbc-iitd.vercel.app",
+
   joinUrl: "https://www.jotform.com/253555944387168",
 
   nextMeetup: {
@@ -23,12 +26,14 @@ window.SITE = {
     { title: "More perks for members", body: "Announced at meetups. Show up to find out." }
   ],
 
+  // photo: a path like "assets/team/vedant.jpg" (square or 4:5). Until it is set, the initials show.
   team: [
     { name: "Manogya", role: "Claude Campus Ambassador", photo: null, linkedin: null },
     { name: "Vedant", role: "Claude Campus Ambassador", photo: null, linkedin: null }
   ],
 
   // Phase 1: approved projects are added here by hand. Phase 2 moves this to a database with voting.
+  // Each project: { title: "…", by: "Name, branch", body: "One or two lines.", url: "https://…" or null }
   projects: [],
   submitProjectUrl: null,   // a Google/Jot form for submissions, once made
 

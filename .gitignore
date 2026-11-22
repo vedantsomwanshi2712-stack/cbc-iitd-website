@@ -1,6 +1,5 @@
 .taste-skill/*
 !.taste-skill/waivers.json
-!.taste-skill/gate.json
 shots/
 node_modules/
 .DS_Store

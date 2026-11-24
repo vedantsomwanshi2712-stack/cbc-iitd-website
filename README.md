@@ -60,10 +60,9 @@ Then open http://localhost:8000. Use a server: opened straight from disk, the br
 4. Click **Deploy**. Every push to the branch you choose (Settings → Git → Production Branch, e.g. `main`) redeploys the site.
 5. Optional: Settings → Domains to add your own domain.
 
-Once the final address is known:
+The site is set up for **https://iitd.claudebuilders.club** (`siteUrl` in the config, and `og:url`, `og:image` and the canonical link in `index.html`). If the address ever changes, update those four places and rebuild `share.jpg`.
 
-- set `siteUrl` in the config;
-- in `index.html`, make `og:image` a full URL (`https://<your-domain>/share.jpg`, which LinkedIn needs) and uncomment the `<link rel="canonical">` line with the same domain.
+To point the domain at the site: on Vercel, Settings → Domains → add `iitd.claudebuilders.club`; Vercel shows the record the domain owner adds (a CNAME for the `iitd` subdomain).
 
 ## Open Graph image
 

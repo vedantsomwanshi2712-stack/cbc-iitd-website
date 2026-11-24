@@ -2,7 +2,7 @@
 // Leave a value as null to hide that part of the page.
 window.SITE = {
   // The address the hero types out. Change it once the club has its own domain. null hides the line.
-  siteUrl: "cbc-iitd.vercel.app",
+  siteUrl: "iitd.claudebuilders.club",
 
   joinUrl: "https://www.jotform.com/253555944387168",
 

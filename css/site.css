@@ -213,3 +213,40 @@ html.js-fade .fade-up.is-in { opacity: 1; transform: none; }
 @media (min-width: 640px) and (max-width: 1023px) { .draw--perks svg { height: 216px; } }
 .lockup__name, .lockup__place { white-space: nowrap; }
 @media (max-width: 639px) { svg.close__art { display: block; height: 150px; margin-top: var(--s-5); } }
+
+/* Every width: sections are as tall as what they hold, with even spacing between them. The kit sizes each
+   section to whole screens (one section per screen), which left empty bands on phones and laptops alike;
+   the club asked for the page without them. */
+main > section, footer.closing { height: auto !important; min-height: 0 !important; display: block !important; padding: 96px 0 88px !important; }
+main > section > .wrap, footer.closing > .wrap { height: auto !important; }
+main > section.g2m > .wrap, footer.closing.g2m > .wrap { grid-template-rows: none !important; row-gap: var(--s-7) !important; }
+footer.closing > .wrap { display: grid; row-gap: var(--s-9); }
+.card.update, .card.act { height: auto; }
+
+/* the hero: the words, the facts and the next meetup in one column, the drawing beside them */
+main > section.hero { padding: calc(var(--nav) + 56px) 0 40px !important; }
+.hero--statement .hero__in { justify-content: flex-start; }
+.meetup { margin-top: var(--s-7); }
+@media (min-width: 1024px) {
+  .hero--statement .hero__in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 5fr); column-gap: var(--gutter); align-items: center; }
+  .hero__words { grid-column: 1; grid-row: 1; }
+  .meetup { grid-column: 1; grid-row: 2; align-self: start; }
+  .hero-drawing { position: static; translate: none; grid-column: 2; grid-row: 1 / span 2; width: 100%; max-width: 440px; justify-self: end; }
+  .hero--statement .hero__in { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  main > section, footer.closing { padding: 88px 0 80px !important; }
+  main > section.hero { padding: calc(var(--nav) + 48px) 0 80px !important; }
+  .hero-drawing { position: static; translate: none; width: 300px; margin: var(--s-6) 0 0 auto; }
+}
+@media (max-width: 639px) {
+  main > section, footer.closing { padding: 72px 0 64px !important; }
+  main > section.hero { padding: calc(var(--nav) + 40px) 0 56px !important; }
+  .about__b .draw--about svg { height: 220px; }
+  .update__panel { height: 170px; }
+  .update__panel svg { width: 46%; }
+  .draw--perks svg { height: 180px; }
+  .draw--team svg { height: 140px; }
+  .draw--projects svg { height: 180px; }
+  svg.close__art { height: 120px; }
+}
